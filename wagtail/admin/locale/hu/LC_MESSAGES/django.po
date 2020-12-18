@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wagtail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-16 18:00+0100\n"
-"PO-Revision-Date: 2019-10-21 02:26+0000\n"
-"Last-Translator: aaao <aron.santa@gmail.com>\n"
+"POT-Creation-Date: 2020-01-20 20:12+0000\n"
+"PO-Revision-Date: 2020-01-20 20:13+0000\n"
+"Last-Translator: Matt Westcott <matthew@torchbox.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/torchbox/wagtail/language/"
 "hu/)\n"
 "MIME-Version: 1.0\n"
@@ -204,6 +204,9 @@ msgstr "izlandi"
 msgid "Italian"
 msgstr "olasz"
 
+msgid "Japanese"
+msgstr "Japán"
+
 msgid "Korean"
 msgstr "koreai"
 
@@ -324,6 +327,9 @@ msgstr "Bezár"
 msgid "Edit '{title}'"
 msgstr "'{title}' szerkesztése"
 
+msgid "View child pages of '{title}'"
+msgstr "'{title}' gyerekoldalainak megtekintése"
+
 msgid "Page explorer"
 msgstr "Intéző"
 
@@ -432,6 +438,9 @@ msgstr "Frissítés"
 msgid "Change email"
 msgstr "E-mail cím megváltoztatása"
 
+msgid "Change name"
+msgstr "Név megváltoztatása"
+
 msgid "Change password"
 msgstr "Jelszó megváltoztatása"
 
@@ -519,6 +528,12 @@ msgstr "Külső link"
 msgid "Email link"
 msgstr "Email link"
 
+msgid "Phone link"
+msgstr "Telefonszám link"
+
+msgid "Anchor link"
+msgstr "Belső hivatkozás"
+
 #, python-format
 msgid ""
 "\n"
@@ -534,6 +549,12 @@ msgstr[0] ""
 msgstr[1] ""
 "\n"
 "Találatok száma: %(counter)s"
+
+msgid "Add an anchor link"
+msgstr "Belső hivatkozás hozzáadása"
+
+msgid "Insert anchor"
+msgstr "Belső hivatkozás beillesztése"
 
 msgid "Choose"
 msgstr "Kiválasztás"
@@ -569,6 +590,9 @@ msgstr "Link beszúrása"
 
 msgid "Add an external link"
 msgstr "Külső link hozzáadása"
+
+msgid "Add a phone link"
+msgstr "Telefonszám link hozzáadása"
 
 msgid "Collection privacy"
 msgstr "Gyűjtemény láthatósága"
@@ -636,11 +660,27 @@ msgstr ""
 "Íme az Ön műszerfala, amelyen hasznos információk jelennek meg a létrehozott "
 "oldalairól."
 
-msgid "Pages awaiting moderation"
-msgstr "Moderálásra váró oldalak"
-
 msgid "Title"
 msgstr "Cím"
+
+msgid "Edit this page"
+msgstr "Oldal szerkesztése"
+
+msgid "Edit"
+msgstr "Szerkeszt"
+
+msgid "Draft"
+msgstr "Vázlat"
+
+msgid "Live"
+msgstr "Közzétett oldal"
+
+#, python-format
+msgid "%(time_period)s ago"
+msgstr "%(time_period)s "
+
+msgid "Pages awaiting moderation"
+msgstr "Moderálásra váró oldalak"
 
 msgid "Parent"
 msgstr "Szülő"
@@ -651,9 +691,6 @@ msgstr "Típus"
 msgid "Edited"
 msgstr "Szerkesztve"
 
-msgid "Edit this page"
-msgstr "Oldal szerkesztése"
-
 msgid "Preview this page"
 msgstr "Oldal előnézete"
 
@@ -663,15 +700,8 @@ msgstr "Jóváhagy"
 msgid "Reject"
 msgstr "Elutasít"
 
-msgid "Edit"
-msgstr "Szerkeszt"
-
 msgid "Preview"
 msgstr "Előnézet"
-
-#, python-format
-msgid "%(time_period)s ago"
-msgstr "%(time_period)s "
 
 msgid "Your most recent edits"
 msgstr "A legutóbbi szerkesztések"
@@ -681,12 +711,6 @@ msgstr "Dátum"
 
 msgid "Status"
 msgstr "Állapot"
-
-msgid "Draft"
-msgstr "Vázlat"
-
-msgid "Live"
-msgstr "Közzétett oldal"
 
 msgid "Site summary"
 msgstr "Oldal összegzés"
@@ -779,21 +803,6 @@ msgid "Privacy changes apply to all children of this page too."
 msgstr ""
 "A láthatóság beállításai érvényesek lesznek az összes ez alatti tartalomra "
 "is."
-
-msgid "Edit lock"
-msgstr "Szerkesztési zárolás"
-
-msgid "Remove editor lock. Current status: Locked"
-msgstr "Szerkesztési zár levétele. Jelenlegi státusz: lezárt"
-
-msgid "Apply editor lock. Current status: Unlocked"
-msgstr "Szerkesztési zár beállítása: Jelenlegi státusz: nyitott"
-
-msgid "Locked"
-msgstr "Zárolt"
-
-msgid "Unlocked"
-msgstr "Nyitott"
 
 msgid "Set page privacy. Current status: Public"
 msgstr "Oldal láthatóságának beállítása. Jelenlegi státusz: publikus"
@@ -1273,6 +1282,9 @@ msgstr "Egyetlen oldal sem használja: "
 msgid "Collection"
 msgstr "Gyűjtemény"
 
+msgid "Locked"
+msgstr "Zárolt"
+
 #, python-format
 msgid "Page %(page_num)s of %(total_pages)s."
 msgstr "%(page_num)s/%(total_pages)s. oldal"
@@ -1307,30 +1319,6 @@ msgstr "Oldal jelenlegi státusza:"
 msgid "Other searches"
 msgstr "További keresések"
 
-msgid ""
-"You are using an <strong>outdated</strong> browser not supported by this "
-"software. Please <a href=\"http://browsehappy.com/\">upgrade your browser</"
-"a>."
-msgstr ""
-"Egy <strong>régi</strong>, már nem támogatott böngészőt használ. Kérjük <a "
-"href=\"http://browsehappy.com/\">váltson újabbra</a>."
-
-msgid ""
-"\n"
-"            Javascript is required to use Wagtail, but it is currently "
-"disabled.<br />\n"
-"            Here are the <a href=\"http://www.enable-javascript.com/\" "
-"target=\"_blank\" rel=\"noopener noreferrer\">instructions how to enable "
-"JavaScript in your web browser</a>.\n"
-"        "
-msgstr ""
-"\n"
-"A felület működéséhez Javascript szükséges, de jelenleg ki van kapcsolva."
-"<br />\n"
-"Itt megnézheti, hogy <a href=\"http://www.enable-javascript.com/\" target="
-"\"_blank\" rel=\"noopener noreferrer\">hogyan kell a böngészőjében "
-"bekapcsolni a JavaScriptek futtatását</a>."
-
 msgid "Go to Wagtail admin interface"
 msgstr "Wagtail admin felület megnyitása"
 
@@ -1364,6 +1352,9 @@ msgstr "Jelszó sikeresen megváltoztatva!"
 
 msgid "Your email has been changed successfully!"
 msgstr "Az e-mail cím sikeresen megváltoztatva!"
+
+msgid "Your name has been changed successfully!"
+msgstr "Név sikeresen megváltoztatva!"
 
 msgid "Your preferences have been updated."
 msgstr "A beállítások frissítése megtörtént."
@@ -1501,9 +1492,6 @@ msgstr "'{0}' oldal közzététele el lett utasítva."
 msgid "Failed to send rejection notifications"
 msgstr "Nem sikerült értesítést küldeni az elutasításról."
 
-msgid "Page '{0}' is now locked."
-msgstr "'{0}' oldal zárolva lett."
-
 msgid "Page '{0}' is now unlocked."
 msgstr "'{0}' oldal zárolása fel lett oldva."
 
@@ -1527,11 +1515,54 @@ msgstr "'{1}' {0}. verziója"
 msgid "Revision {0} of \"{1}\" unscheduled."
 msgstr "'{1}' {0}. verziójának időzítése visszavonva. "
 
+#, python-format
+msgid "Edit '%(title)s'"
+msgstr "'%(title)s' szerkesztése"
+
+#, python-format
+msgid "Preview draft version of '%(title)s'"
+msgstr "'%(title)s' vázlatának előnézete"
+
+#, python-format
+msgid "View live version of '%(title)s'"
+msgstr "'%(title)s' élő változatának előnézete"
+
+#, python-format
+msgid "Add a child page to '%(title)s' "
+msgstr "Gyermekoldal hozzáadása ehhez: '%(title)s'"
+
 msgid "More"
 msgstr "Tovább"
 
+#, python-format
+msgid "View more options for '%(title)s'"
+msgstr "'%(title)s' oldal további lehetőségei"
+
+#, python-format
+msgid "Move page '%(title)s'"
+msgstr "'%(title)s' oldal mozgatása"
+
+#, python-format
+msgid "Copy page '%(title)s'"
+msgstr "'%(title)s' oldal másolása"
+
+#, python-format
+msgid "Delete page '%(title)s'"
+msgstr "'%(title)s' oldal törlése"
+
+#, python-format
+msgid "Unpublish page '%(title)s'"
+msgstr "'%(title)s' oldal visszavonása"
+
+#, python-format
+msgid "View revision history for '%(title)s'"
+msgstr "'%(title)s' oldal korábbi verzióinak megtekintése"
+
 msgid "Set profile picture"
 msgstr "Profilkép beállítása"
+
+msgid "Change your profile picture."
+msgstr "Profilkép megváltoztatása."
 
 msgid "Change the email address linked to your account."
 msgstr "A fiókhoz társított e-mail cím megváltoztatása"
@@ -1553,6 +1584,13 @@ msgstr "Jelenlegi időzóna"
 
 msgid "Choose your current time zone."
 msgstr "Válassza ki a jelenlegi időzónáját."
+
+msgid "Change your first and last name on your account."
+msgstr "A fiókhoz társított vezeték- és keresztnév megváltoztatása."
+
+#, python-format
+msgid "Heading %(level)d"
+msgstr "Fejléc %(level)d"
 
 msgid "Bulleted list"
 msgstr "Lista"
