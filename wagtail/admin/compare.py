@@ -13,7 +13,7 @@ from wagtail.core import blocks
 
 def text_from_html(val):
     # Return the unescaped text content of an HTML string
-    rendered = BeautifulSoup(force_str(html), 'html5lib').getText(separator=' ')
+    rendered = BeautifulSoup(force_str(val), 'html5lib').getText(separator=' ')
     rendered = re.sub(r'\s+', ' ', rendered)
     return rendered
 
