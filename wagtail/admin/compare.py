@@ -1,4 +1,5 @@
 import difflib
+import re
 
 from bs4 import BeautifulSoup
 from django.utils.encoding import force_str
@@ -8,6 +9,12 @@ from django.utils.text import capfirst
 from django.utils.translation import ugettext_lazy as _
 
 from wagtail.core import blocks
+
+
+def html_to_diffable_text(html):
+    rendered = BeautifulSoup(force_str(html), 'html5lib').getText(separator=' ')
+    rendered = re.sub(r'\s+', ' ', rendered)
+    return rendered
 
 
 class FieldComparison:
@@ -52,8 +59,8 @@ class TextFieldComparison(FieldComparison):
 class RichTextFieldComparison(TextFieldComparison):
     def htmldiff(self):
         return diff_text(
-            BeautifulSoup(force_str(self.val_a), 'html5lib').getText(),
-            BeautifulSoup(force_str(self.val_b), 'html5lib').getText()
+            html_to_diffable_text(self.val_a),
+            html_to_diffable_text(self.val_b)
         ).to_html()
 
 
@@ -103,8 +110,8 @@ class CharBlockComparison(BlockComparison):
 class RichTextBlockComparison(BlockComparison):
     def htmldiff(self):
         return diff_text(
-            BeautifulSoup(force_str(self.val_a), 'html5lib').getText(),
-            BeautifulSoup(force_str(self.val_b), 'html5lib').getText()
+            html_to_diffable_text(self.val_a),
+            html_to_diffable_text(self.val_b)
         ).to_html()
 
 
@@ -219,8 +226,8 @@ class StreamFieldComparison(FieldComparison):
         else:
             # Fall back to diffing the HTML representation
             return diff_text(
-                BeautifulSoup(force_str(self.val_a), 'html5lib').getText(),
-                BeautifulSoup(force_str(self.val_b), 'html5lib').getText()
+                html_to_diffable_text(self.val_a),
+                html_to_diffable_text(self.val_b)
             ).to_html()
 
 
