@@ -60,13 +60,8 @@ class TextFieldComparison(FieldComparison):
 class RichTextFieldComparison(TextFieldComparison):
     def htmldiff(self):
         return diff_text(
-<<<<<<< HEAD
-            html_to_diffable_text(self.val_a),
-            html_to_diffable_text(self.val_b)
-=======
             text_from_html(self.val_a),
             text_from_html(self.val_b)
->>>>>>> v2.8.2
         ).to_html()
 
 
@@ -132,15 +127,7 @@ class CharBlockComparison(BlockComparison):
 
 
 class RichTextBlockComparison(BlockComparison):
-<<<<<<< HEAD
-    def htmldiff(self):
-        return diff_text(
-            html_to_diffable_text(self.val_a),
-            html_to_diffable_text(self.val_b)
-        ).to_html()
-=======
     pass
->>>>>>> v2.8.2
 
 
 class StructBlockComparison(BlockComparison):
@@ -254,13 +241,8 @@ class StreamFieldComparison(FieldComparison):
         else:
             # Fall back to diffing the HTML representation
             return diff_text(
-<<<<<<< HEAD
-                html_to_diffable_text(self.val_a),
-                html_to_diffable_text(self.val_b)
-=======
                 text_from_html(self.val_a),
                 text_from_html(self.val_b)
->>>>>>> v2.8.2
             ).to_html()
 
 
